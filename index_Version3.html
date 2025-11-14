@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>我的電腦設備介紹</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>我的電腦設備介紹</h1>
+    <p class="subtitle">歡迎來到我的小天地 — 這裡有介紹我的硬體與背景音樂</p>
+  </header>
+
+  <main class="container">
+    <section class="music-panel">
+      <h2>背景音樂</h2>
+      <div class="audio-controls">
+        <!-- 若你之後不上傳 mp3，可把 src 改為公開音檔 URL -->
+        <audio id="bg-audio" src="music/your-music.mp3" loop preload="auto"></audio>
+        <button id="play-btn" class="btn">播放</button>
+        <button id="mute-btn" class="btn">靜音</button>
+        <label class="volume">
+          音量
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5" />
+        </label>
+      </div>
+      <p class="hint">註：大部分瀏覽器需要使用者互動才能播放音訊。點一下「播放」以啟動音樂。</p>
+    </section>
+
+    <section class="hardware-panel">
+      <h2>我的電腦設備</h2>
+      <div id="hardware-list" class="grid">
+        <!-- 由 script.js 動態填充卡片 -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>建立者：Louis • GitHub: 7515817/LouisSetup</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

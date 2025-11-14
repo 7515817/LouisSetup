@@ -1,0 +1,90 @@
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7dd3fc;
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans",Arial;
+  background:linear-gradient(180deg,var(--bg),#071028);
+  color:#e6eef8;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+}
+.site-header{
+  padding:36px 20px;
+  text-align:center;
+  background:linear-gradient(90deg,rgba(125,211,252,0.06),transparent);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+}
+.subtitle{color:var(--muted);margin-top:8px}
+.container{
+  width:100%;
+  max-width:980px;
+  margin:28px auto;
+  padding:0 18px;
+  flex:1;
+}
+.music-panel, .hardware-panel{
+  background:var(--card);
+  padding:18px;
+  border-radius:10px;
+  margin-bottom:18px;
+  box-shadow:0 6px 18px rgba(2,6,23,0.6), inset 0 1px rgba(255,255,255,0.02);
+  border:1px solid rgba(255,255,255,0.02);
+}
+.audio-controls{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+.btn{
+  background:linear-gradient(180deg,var(--accent),#38bdf8);
+  border:none;
+  color:#022;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+.btn.secondary{
+  background:transparent;
+  color:var(--muted);
+  border:1px solid rgba(255,255,255,0.03);
+}
+.volume input{vertical-align:middle;margin-left:8px}
+.hint{color:var(--muted);font-size:13px;margin-top:8px}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+  gap:12px;
+  margin-top:12px;
+}
+.card{
+  background:var(--glass);
+  padding:12px;
+  border-radius:10px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.card h3{margin:0 0 6px 0}
+.card p{margin:4px 0;color:var(--muted);font-size:14px}
+.specs{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.tag{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:8px;font-size:13px;color:var(--muted)}
+
+.site-footer{
+  text-align:center;
+  padding:16px 10px;
+  color:var(--muted);
+  font-size:13px;
+  border-top:1px solid rgba(255,255,255,0.02);
+}
+@media (max-width:480px){
+  .audio-controls{gap:8px}
+  .btn{padding:8px}
+}
